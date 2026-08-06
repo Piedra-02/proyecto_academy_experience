@@ -3,63 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Proyecto Academy Experience</title>
 </head>
 <body>
 
-    <!-- Encabezado y navegacion -->
-    <header>
-        <nav>
-           
-            <h1>INICIO</h1>
-        </nav>
-        <input type="text" placeholder="Buscar...">
-    </header>
+    <div class="dashboard">
 
-    <!-- Contenido principal -->
-    <main>
+        <!-- Encabezado y navegacion -->
+        <header class="dashboard-header">
+            <nav class="header-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="user-avatar-dot"></span>
+                <h1>INICIO</h1>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </header>
 
-        <!-- Seccion de Usuario -->
-        <section>
-            <p>DOUGLAS CRUZ</p>
-            
-        </section>
+        <!-- Contenido principal -->
+        <main class="dashboard-main">
 
-        <!-- Seccion de Notificaciones -->
-        <section>
-            <h2>NOTIFICACIONES</h2>
-            
-            <article>
-               
-                <p>ALERTA I - TPS SE A ATRASADO</p>
-            </article>
+            <!-- Seccion de Usuario -->
+            <section class="user-profile">
+                <span class="user-profile-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <p>DOUGLAS CRUZ</p>
+            </section>
 
-            <article>
-                
-                <p>ALERTA I - GENERAL ATRASADO</p>
-            </article>
-        </section>
+            <div class="dashboard-content">
 
-        <!-- Seccion de Clase Actual -->
-        <section>
-            <h2>CLASE ACTUAL</h2>
+                <!-- Video / imagen de la clase -->
+                <section class="class-video-stage">
+                    <img src="" alt="Miniatura de la clase" class="class-video-placeholder">
+                </section>
 
-            <article>
-                <p>DESARROLLO WEB</p>
-                <p>Estudiante - ATRASADO</p>
-                <p>4:30 P.M.</p>
-                <p></p>
-                <button>UNIRSE</button>
-            </article>
-        </section>
+                <div class="dashboard-sidebar">
 
-    </main>
+                    <!-- Seccion de Notificaciones -->
+                    <section class="notifications-section">
+                        <h2>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3a5 5 0 0 0-5 5v3.2c0 .6-.2 1.2-.6 1.7L5 15h14l-1.4-2.1c-.4-.5-.6-1.1-.6-1.7V8a5 5 0 0 0-5-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                <path d="M9.5 18a2.5 2.5 0 0 0 5 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                            </svg>
+                            NOTIFICACIONES
+                        </h2>
 
-    <!-- Pie de pagina -->
-    <footer>
-        <p>Hecho por Pablo Piedra y Douglas Cruz</p>
-    </footer>
+                        <div class="notifications-list">
+                            <article class="notification-card">
+                                <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                    <line x1="12" y1="10" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                                </svg>
+                                <p><strong>ALERTA!</strong><span>15% de atrasos</span></p>
+                            </article>
+
+                            <article class="notification-card">
+                                <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                    <line x1="12" y1="10" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                                </svg>
+                                <p><strong>ALERTA!</strong><span>Deberes atrasados</span></p>
+                            </article>
+                        </div>
+
+                        <button class="notifications-toggle" aria-label="Ver más notificaciones">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </section>
+
+                    <!-- Seccion de Clase Actual -->
+                    <section class="current-class-section">
+                        <h2>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="5" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <line x1="8" y1="5" x2="8" y2="19" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                            CLASE ACTUAL
+                        </h2>
+
+                        <article class="current-class-card">
+                            <div class="current-class-thumbnail"></div>
+                            <div class="current-class-info">
+                                <p class="current-class-title">DESARROLLO WEB</p>
+                                <p class="current-class-student">DOUGLAS CRUZ</p>
+                                <p class="current-class-nrc">NRC 1542</p>
+                            </div>
+                            <div class="current-class-footer">
+                                <span class="current-class-time">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                                        <polyline points="12 7 12 12 15 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    3:30 | 14:30
+                                </span>
+                                <button class="join-class-button">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="6" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                        <path d="M16 10.5 22 7v10l-6-3.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                    </svg>
+                                    UNIRSE
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Pie de pagina -->
+        <footer class="site-footer">
+            <p>Hecho por Pablo Piedra y Douglas Cruz</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
