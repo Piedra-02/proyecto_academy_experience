@@ -1,0 +1,187 @@
+<!-- Encabezado de la interfaz -->
+<header>
+
+  <button type="button" aria-label="Abrir menú de navegación">
+    Menú
+  </button>
+
+  <img src="logo.png" alt="Logo de la aplicación">
+
+  <h1>GESTION ACADEMICA</h1>
+  
+  <!-- Barra de búsqueda -->
+  <form role="search">
+
+    <input 
+      type="search" 
+      id="busqueda" 
+      name="q" 
+      placeholder="Buscar...">
+
+    <button type="submit" aria-label="Buscar">
+      Buscar
+    </button>
+
+  </form>
+
+</header>
+
+
+<main>
+
+  <!-- Selector/Navegador de Días -->
+  <nav class="selector-dia" aria-label="Navegación de días de la semana">
+
+    <button type="button" aria-label="Día anterior">
+      Anterior
+    </button>
+
+    <h2>LUNES</h2>
+
+    <button type="button" aria-label="Día siguiente">
+      Siguiente
+    </button>
+
+  </nav>
+
+
+
+  <!-- Panel Principal del Horario -->
+  <section class="seccion-horario">
+
+
+    <header class="horario-header">
+
+      <span class="icono-calendario"></span>
+
+      <h2>HORARIO</h2>
+
+    </header>
+
+
+
+    <!-- Grilla de Materias / Horario -->
+    <div class="grid-horario">
+
+
+      <article class="tarjeta-clase">
+
+        <header class="clase-header">
+
+          <time datetime="13:30">
+            13:30 | 2:40
+          </time>
+
+          <button type="button" aria-label="Expandir detalles">
+            Detalles
+          </button>
+
+        </header>
+
+
+        <div class="icono-materia"></div>
+
+        <h3>PROGRAMACION</h3>
+
+        <p class="nrc">
+          NRC 1342
+        </p>
+
+        <span class="modalidad">
+          VIRTUAL
+        </span>
+
+      </article>
+
+
+
+      <article class="tarjeta-clase">
+
+        <header class="clase-header">
+
+          <time datetime="13:30">
+            13:30 | 2:40
+          </time>
+
+          <button type="button" aria-label="Expandir detalles">
+            Detalles
+          </button>
+
+        </header>
+
+
+        <div class="icono-materia"></div>
+
+        <h3>COMUNICACION</h3>
+
+        <p class="nrc">
+          NRC 1256
+        </p>
+
+        <span class="modalidad">
+          PRESENCIAL
+        </span>
+
+      </article>
+
+
+
+      <article class="tarjeta-clase">
+
+        <header class="clase-header">
+
+          <time datetime="13:30">
+            13:30 | 2:40
+          </time>
+
+          <button type="button" aria-label="Expandir detalles">
+            Detalles
+          </button>
+
+        </header>
+
+
+        <div class="icono-materia"></div>
+
+        <h3>BASE DE DATOS</h3>
+
+        <p class="nrc">
+          NRC 1668
+        </p>
+
+        <span class="modalidad">
+          VIRTUAL
+        </span>
+
+      </article>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- Botón de acción principal -->
+  <div class="acciones-footer">
+
+    <button type="button">
+      AULA VIRTUAL
+    </button>
+
+  </div>
+
+
+</main>
+
+
+
+<!-- Pie de página -->
+<footer>
+
+  <p>
+    Hecho por Douglas Cruz
+  </p>
+
+</footer>
