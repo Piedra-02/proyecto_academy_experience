@@ -21,3 +21,80 @@ HTML
             <button type="submit" aria-label="Buscar">🔍</button>
         </form>
     </header>
+
+
+<!-- Contenido principal -->
+<main>
+
+        <!-- Información del Usuario Logueado -->
+        <section class="perfil-resumen">
+            <div class="avatar">👤</div>
+            <p>DOUGLAS CRUZ</p>
+        </section>
+
+        <!-- Contenido Principal: Mapa y Rutas -->
+        <div class="campus-container">
+            
+            <!-- Sección del Mapa del Campus -->
+            <section class="seccion-mapa">
+                <h2>MAPA</h2>
+                
+                <!-- Visualizador del Mapa -->
+                <div class="mapa-frame">
+                    <img src="mapa-campus.png" alt="Mapa del Campus">
+                </div>
+                
+                <!-- Pie de Información del Mapa -->
+                <footer class="mapa-info">
+                    <div class="ubicacion">
+                        <span>🏠</span>
+                        <span>EDIFICIO 4</span>
+                    </div>
+                    <div class="tiempo-estimado">
+                        <span>🕒</span>
+                        <time datetime="PT2M">2 MINUTOS</time>
+                    </div>
+                </footer>
+            </section>
+
+            <!-- Panel para Cálculo/Generación de Rutas -->
+            <section class="seccion-ruta">
+                <h2>RUTA</h2>
+
+                <form class="form-ruta">
+                    <!-- Campo Origen -->
+                    <div class="campo-grupo">
+                        <label for="origen">ORIGEN</label>
+                        <div class="input-icon">
+                            <input type="text" id="origen" name="origen" placeholder="ESCRIBE AQUÍ...">
+                            <button type="button" aria-label="Editar origen">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Campo Destino -->
+                    <div class="campo-grupo">
+                        <label for="destino">DESTINO</label>
+                        <div class="input-icon">
+                            <input type="text" id="destino" name="destino" placeholder="ESCRIBE AQUÍ...">
+                            <button type="button" aria-label="Editar destino">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Botón de Generar Ruta -->
+                    <button type="submit">🗺️ GENERAR RUTA</button>
+                </form>
+
+                <!-- Feedback de Estado de la Ruta -->
+                <div class="estados-ruta">
+                    <p class="estado exito">
+                        <span>✔</span> RUTA ENCONTRADA
+                    </p>
+                    <p class="estado alerta">
+                        <span>⚠️</span> NO ENCONTRÓ LA RUTA
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
