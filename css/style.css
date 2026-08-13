@@ -408,3 +408,89 @@ img.class-video-placeholder {
     font-size: 0.75rem;
 }
 
+/* ==========================================================
+   RESPONSIVE — Flexbox + Media Queries
+   Estrategia de breakpoints progresivos (no solo uno):
+   el layout se reorganiza en varios pasos según el ancho
+   disponible, en vez de saltar directo de escritorio a móvil.
+   ========================================================== */
+
+/* Paso 1 — Tablets / laptops pequeñas (≤1024px).
+   El video deja de ser 1.6 veces más ancho que el sidebar
+   y pasa a un reparto más equilibrado (grid-template-columns),
+   preparando el terreno antes del colapso total a una columna. */
+@media (max-width: 1024px) {
+    .dashboard-content {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+/* Paso 2 — Tablets (≤720px).
+   El grid de 2 columnas pasa a 1 sola columna: el video
+   queda arriba y el panel de notificaciones/clase abajo. */
+@media (max-width: 720px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Paso 3 — Móviles (≤480px).
+   Aquí es donde Flexbox hace el trabajo pesado: varios
+   contenedores cambian su flex-direction de "row" a "column"
+   para apilar el contenido en vez de aplastarlo horizontalmente. */
+@media (max-width: 480px) {
+
+    /* El header pasa de fila (logo+búsqueda lado a lado)
+       a columna (uno debajo del otro). align-items: stretch
+       hace que ambos ocupen el ancho completo disponible. */
+    .dashboard-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    /* Dentro de esa columna, el grupo del logo se reparte
+       con justify-content: space-between para separar el
+       menú hamburguesa del resto en pantallas muy angostas. */
+    .header-nav {
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    /* Las tarjetas de notificación pasan de fila (ícono + texto
+       lado a lado) a columna, para que el texto largo no se
+       comprima contra el ícono. */
+    .notification-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    /* La tarjeta de "clase actual" deja de usar CSS Grid
+       (auto 1fr) y pasa a Flexbox en columna: miniatura arriba,
+       info debajo, footer al final — más legible en pantallas chicas. */
+    .current-class-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .current-class-thumbnail {
+        width: 100%;
+        height: 140px;
+    }
+
+    /* El footer de la tarjeta (hora + botón) también pasa de
+       fila a columna, y el botón se centra con justify-content. */
+    .current-class-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .join-class-button {
+        justify-content: center;
+    }
+}   
