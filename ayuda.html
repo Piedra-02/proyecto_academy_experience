@@ -1,110 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda | Academy Experience</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/ayuda.css">
 </head>
-
 <body>
 
-    <!-- Encabezado -->
-    <header>
+    <div class="dashboard">
 
-        <nav>
-
-            <button aria-label="Abrir menú">
-                Menú
-            </button>
-
-            <h1>AYUDA</h1>
-
-            <input
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Buscar en la página">
-
-        </nav>
-
-    </header>
-
-    <!-- Contenido principal -->
-    <main>
-
-        <!-- Saludo -->
-        <section>
-
-            <h2>Hola Douglas</h2>
-
-        </section>
-
-        <!-- Información -->
-        <section>
-
-            <article>
-
-                <p><strong>Nombre:</strong> Pablo Piedra</p>
-
-                <p><strong>Carrera:</strong> Software</p>
-
-                <p><strong>Correo:</strong> papiedrab@</p>
-
-            </article>
-
-        </section>
-
-        <!-- Preguntas frecuentes -->
-        <section>
-
-            <h2>Preguntas Frecuentes</h2>
-
-            <article>
-
-                <button aria-label="Mostrar información sobre el banner">
-                    ¿Cómo uso el banner?
+        <!-- Encabezado y navegación -->
+        <header class="dashboard-header">
+            <nav class="header-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
+                <span class="user-avatar-dot"></span>
+                <h1>AYUDA</h1>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </header>
 
-            </article>
+        <!-- Contenido principal -->
+        <main class="dashboard-main">
 
-            <article>
+            <!-- Sección de Usuario -->
+            <section class="user-profile">
+                <span class="user-profile-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <p>HOLA DOUGLAS</p>
+            </section>
 
-                <button aria-label="Mostrar información sobre el aula virtual">
-                    ¿Cómo uso el aula virtual?
-                </button>
+            <div class="help-content-container">
 
-            </article>
+                <!-- Tarjeta de Información -->
+                <section class="help-info-card">
+                    <div class="help-info-item">
+                        <svg class="help-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7 12 2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                        <p><strong>NOMBRE:</strong> <span>DOUGLAS CRUZ</span></p>
+                    </div>
+                    <div class="help-info-item">
+                        <svg class="help-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+                        </svg>
+                        <p><strong>CARRERA:</strong> <span>SOFTWARE</span></p>
+                    </div>
+                    <div class="help-info-item">
+                        <svg class="help-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="m22 7-10 7L2 7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        </svg>
+                        <p><strong>CORREO:</strong> <span>Douglascruz@gmail.com</span></p>
+                    </div>
+                </section>
 
-            <article>
+                <!-- Preguntas Frecuentes -->
+                <section class="faq-section">
+                    <h2>PREGUNTAS FRECUENTES</h2>
 
-                <button aria-label="Mostrar información sobre la matrícula">
-                    ¿Cómo me matriculo?
-                </button>
+                    <div class="faq-list">
+                        <article class="faq-card">
+                            <button class="faq-button">
+                                <svg class="faq-icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 14H4V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 14L13 5c1.5-1.5 4-1.5 5.5 0s1.5 4 0 5.5L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>¿COMO USO EL BANNER?</span>
+                                <svg class="faq-icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </article>
 
-            </article>
+                        <article class="faq-card">
+                            <button class="faq-button">
+                                <svg class="faq-icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 14H4V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 14L13 5c1.5-1.5 4-1.5 5.5 0s1.5 4 0 5.5L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>¿COMO USO EL AULA VIRTUAL?</span>
+                                <svg class="faq-icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </article>
 
-        </section>
+                        <article class="faq-card">
+                            <button class="faq-button">
+                                <svg class="faq-icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 14H4V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 14L13 5c1.5-1.5 4-1.5 5.5 0s1.5 4 0 5.5L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>¿COMO ME MATRICULO?</span>
+                                <svg class="faq-icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </article>
+                    </div>
+                </section>
 
-        <!-- Botón inferior -->
-        <section>
+                <!-- Botón inferior Banner -->
+                <div class="banner-action-container">
+                    <button class="banner-action-button">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" stroke="currentColor" stroke-width="1.6"/>
+                            <line x1="12" y1="22" x2="12" y2="15.5" stroke="currentColor" stroke-width="1.6"/>
+                            <polyline points="22 8.5 12 15.5 2 8.5" stroke="currentColor" stroke-width="1.6"/>
+                        </svg>
+                        BANNER
+                    </button>
+                </div>
 
-            <button aria-label="Ir al banner">
-                BANNER
-            </button>
+            </div>
 
-        </section>
+        </main>
 
-    </main>
+        <!-- Pie de página -->
+        <footer class="site-footer">
+            <p>Hecho por Pablo Piedra y Douglas Cruz</p>
+        </footer>
 
-    <!-- Pie de página -->
-    <footer>
-
-        <p>Hecho por Pablo Piedra y Douglas Cruz</p>
-
-    </footer>
+    </div>
 
 </body>
-
 </html>
-
