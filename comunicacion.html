@@ -1,254 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Proyecto Academy Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Comunicación - Academy Experience</title>
 </head>
-
 <body>
 
-<!-- Encabezado Global de la Aplicación -->
-<header>
+    <div class="dashboard">
 
-    <button type="button" aria-label="Abrir menú de navegación">
-        ≡
-    </button>
+        <!-- Encabezado y navegacion -->
+        <header class="dashboard-header">
+            <nav class="header-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="user-avatar-dot"></span>
+                <h1>COMUNICACIÓN</h1>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </header>
 
-    <h1>COMUNICACIÓN</h1>
+        <!-- Contenido principal -->
+        <main class="dashboard-main">
 
-    <!-- Barra de búsqueda -->
-    <form role="search">
+            <!-- Barra de acciones -->
+            <div class="comm-toolbar">
+                <button class="compose-button">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 20h4l10.5-10.5a2 2 0 0 0 0-2.8l-1.2-1.2a2 2 0 0 0-2.8 0L4 16v4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        <line x1="14" y1="6.5" x2="17.5" y2="10" stroke="currentColor" stroke-width="1.6"/>
+                    </svg>
+                    REDACTAR
+                </button>
 
-        <input 
-            type="search" 
-            id="busqueda" 
-            name="q" 
-            placeholder="Buscar...">
-
-        <button type="submit" aria-label="Buscar">
-            🔍
-        </button>
-
-    </form>
-
-</header>
-
-
-<!-- Contenido principal -->
-<main>
-
-    <!-- Barra de Acciones -->
-    <section class="acciones">
-
-        <button type="button">
-            Redactar
-        </button>
-
-        <div class="herramientas">
-
-            <button type="button" aria-label="Buzón/Archivar">
-                📦
-            </button>
-
-            <button type="button" aria-label="Recargar">
-                🔄
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- Lista de Mensajes / Tarjetas -->
-    <section class="lista-mensajes">
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
+                <button class="archive-button" aria-label="Archivo de mensajes, actualizar">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="5" rx="1.4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        <line x1="10" y1="13" x2="14" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12a9 9 0 1 1 2.6 6.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        <polyline points="3 8 3 13 8 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
 
-            <div class="contenido">
+            <!-- Lista de mensajes -->
+            <div class="comm-grid">
 
-                <h3>SECRETARIA</h3>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>SECRETARIA</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Se le informa que debe 3500</p>
+                    </div>
+                </article>
 
-                <p>
-                    SE LE INFORMA QUE DEBE 3500
-                </p>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>SECRETARIA</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Se le informa que debe 3500</p>
+                    </div>
+                </article>
 
-            </div>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>ADMINISTRACIÓN</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Saludos, querido estudiante: se les informa que...</p>
+                    </div>
+                </article>
 
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>ADMINISTRACIÓN</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Saludos, querido estudiante: se les informa que...</p>
+                    </div>
+                </article>
 
-        </article>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>ESTUDIANTE</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Te paso la tarea de álgebra</p>
+                    </div>
+                </article>
 
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="contenido">
-
-                <h3>SECRETARIA</h3>
-
-                <p>
-                    SE LE INFORMA QUE DEBE 3500
-                </p>
-
-            </div>
-
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
-
-        </article>
-
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="contenido">
-
-                <h3>ADMINISTRACION</h3>
-
-                <p>
-                    SALUDOS QUERIDO ESTUDIANTES SE LES INFORMA QUE...
-                </p>
-
-            </div>
-
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
-
-        </article>
-
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="contenido">
-
-                <h3>ADMINISTRACION</h3>
-
-                <p>
-                    SALUDOS QUERIDO ESTUDIANTES SE LES INFORMA QUE...
-                </p>
-
-            </div>
-
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
-
-        </article>
-
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="contenido">
-
-                <h3>ESTUDIANTE</h3>
-
-                <p>
-                    BRO TE PASO LA TAREA DE ALGEBRA
-                </p>
-
-            </div>
-
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
-
-        </article>
-
-
-
-        <article class="tarjeta-mensaje">
-
-            <div class="avatar">
-                👤
-            </div>
-
-            <div class="contenido">
-
-                <h3>ESTUDIANTE</h3>
-
-                <p>
-                    BRO TE PASO LA TAREA DE ALGEBRA
-                </p>
+                <article class="message-card">
+                    <span class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <div class="message-body">
+                        <div class="message-heading">
+                            <h3>ESTUDIANTE</h3>
+                            <button class="expand-button" aria-label="Expandir mensaje">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16 16 8M9 8h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p>Te paso la tarea de álgebra</p>
+                    </div>
+                </article>
 
             </div>
 
-            <button type="button" aria-label="Expandir">
-                ⤢
-            </button>
+            <!-- Paginacion -->
+            <nav class="comm-pagination" aria-label="Paginación de mensajes">
+                <button class="page-nav" aria-label="Página anterior">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="19" y1="12" x2="5" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <polyline points="11 6 5 12 11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
-        </article>
+                <div class="page-numbers">
+                    <span class="page-ellipsis">…</span>
+                    <button class="page-number page-number--active" aria-current="page">1</button>
+                    <button class="page-number">2</button>
+                </div>
 
+                <button class="page-nav" aria-label="Página siguiente">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <polyline points="13 6 19 12 13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </nav>
 
-    </section>
+        </main>
 
+        <!-- Pie de pagina -->
+        <footer class="site-footer">
+            <p>Hecho por Pablo Piedra y Douglas Cruz</p>
+        </footer>
 
-
-    <!-- Paginación -->
-    <nav class="paginacion" aria-label="Navegación de páginas">
-
-        <button type="button" aria-label="Anterior">
-            &larr;
-        </button>
-
-        <button type="button" aria-label="Página 1">
-            1
-        </button>
-
-        <button type="button" aria-label="Página 2">
-            2
-        </button>
-
-        <button type="button" aria-label="Siguiente">
-            &rarr;
-        </button>
-
-    </nav>
-
-
-</main>
-
-
-
-<!-- Pie de página -->
-<footer>
-
-    <p>
-        Hecho por Pablo Piedra y Douglas Cruz
-    </p>
-
-</footer>
-
+    </div>
 
 </body>
-
 </html>
