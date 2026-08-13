@@ -204,6 +204,9 @@ body {
 
 /* Cuando el placeholder es una imagen real (<img>), que llene el recuadro sin deformarse */
 img.class-video-placeholder {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
     object-fit: cover;
     object-position: center;
 }
@@ -405,9 +408,3 @@ img.class-video-placeholder {
     font-size: 0.75rem;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 720px) {
-    .dashboard-content {
-        grid-template-columns: 1fr;
-    }
-}
