@@ -121,22 +121,28 @@
                         GENERAR RUTA
                     </button>
 
-                    <p class="route-status route-status--success">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/>
-                            <polyline points="8 12.5 11 15.5 16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        RUTA ENCONTRADA
-                    </p>
+                    <!-- El componente de alerta muestra un solo estado a la vez.
+                         Por defecto se ve "ruta encontrada"; la clase .is-hidden
+                         oculta el mensaje de error hasta que la lógica de búsqueda
+                         (a futuro, con JS) decida cuál mostrar. -->
+                    <div class="route-status-group" aria-live="polite">
+                        <p class="route-status route-status--success">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/>
+                                <polyline points="8 12.5 11 15.5 16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            RUTA ENCONTRADA
+                        </p>
 
-                    <p class="route-status route-status--warning">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                            <line x1="12" y1="10" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                            <circle cx="12" cy="17" r="1" fill="currentColor"/>
-                        </svg>
-                        NO ENCONTRÓ LA RUTA
-                    </p>
+                        <p class="route-status route-status--warning is-hidden">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3 2 20h20L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <line x1="12" y1="10" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                            </svg>
+                            NO ENCONTRÓ LA RUTA
+                        </p>
+                    </div>
                 </section>
 
             </div>

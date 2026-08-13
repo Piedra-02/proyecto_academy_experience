@@ -174,15 +174,22 @@
     cursor: not-allowed;
 }
 
+.route-status-group {
+    margin-top: 22px;
+}
+
 .route-status {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 22px;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.4px;
+}
+
+.route-status.is-hidden {
+    display: none;
 }
 
 .route-status svg {
@@ -198,8 +205,3 @@
     color: var(--warning-yellow);
 }
 
-@media (max-width: 720px) {
-    .campus-content {
-        grid-template-columns: 1fr;
-    }
-}   
