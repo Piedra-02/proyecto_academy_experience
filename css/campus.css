@@ -1,0 +1,205 @@
+/* =========================================
+   Estilos específicos de campus.html
+   Requiere que css/style.css esté enlazado antes
+   (usa sus variables generales: --text-white, --accent-blue,
+   --radius-sm/md/lg, --text-muted, --font, etc.)
+   ========================================= */
+
+/* Variables propias de esta pantalla */
+:root {
+    --accent-purple: #6b5b8a;
+    --accent-purple-light: #6f5f95;
+    --route-card-bg: #3a3d5c;
+    --success-green: #2fb872;
+    --warning-yellow: #e8b13c;
+}
+
+/* Layout principal: mapa + panel de ruta */
+.campus-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 28px;
+    align-items: start;
+    flex: 1;
+}
+
+.campus-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-white);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.campus-content h2 svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-white);
+}
+
+/* --- Sección Mapa --- */
+.map-card {
+    background: var(--accent-purple);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+}
+
+.map-placeholder {
+    width: 100%;
+    min-height: 340px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--accent-purple-light);
+    background-image:
+        linear-gradient(45deg, #d9d9e0 25%, transparent 25%),
+        linear-gradient(-45deg, #d9d9e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #d9d9e0 75%),
+        linear-gradient(-45deg, transparent 75%, #d9d9e0 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+    background-color: #ffffff;
+}
+
+.map-info {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 18px;
+}
+
+.map-info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.map-info-item svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Sección Ruta --- */
+.route-card {
+    background: var(--route-card-bg);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.route-field label {
+    display: block;
+    color: var(--text-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.route-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.route-input input {
+    width: 100%;
+    padding: 10px 40px 10px 14px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: #b9b9c2;
+    font-size: 0.75rem;
+    color: #2c2c2c;
+}
+
+.route-input input::placeholder {
+    color: #4a4a4a;
+}
+
+.route-input input:focus {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+.route-input svg {
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    color: #2c2c2c;
+    pointer-events: none;
+}
+
+.generate-route-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    margin-top: 22px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.generate-route-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.generate-route-button:hover {
+    background: #4d84f0;
+}
+
+.generate-route-button:focus-visible {
+    outline: 2px solid var(--text-white);
+    outline-offset: 2px;
+}
+
+.generate-route-button:disabled {
+    background: #5a5c7a;
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.route-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.route-status svg {
+    width: 18px;
+    height: 18px;
+}
+
+.route-status--success {
+    color: var(--success-green);
+}
+
+.route-status--warning {
+    color: var(--warning-yellow);
+}
+
+@media (max-width: 720px) {
+    .campus-content {
+        grid-template-columns: 1fr;
+    }
+}   
