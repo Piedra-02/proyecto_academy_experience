@@ -1,332 +1,127 @@
 /* ===== Variables ===== */
-:root {
-    --bg-outer: #14152e;
-    --bg-main: #10123a;
-    --header-bg: #4b4b4b;
-    --card-bg: #4b4d68;
-    --card-bg-light: #5a5c7a;
-    --text-white: #ffffff;
-    --text-muted: #cfd0dc;
-    --alert-red: #e64848;
-    --accent-blue: #3b6fe0;
-    --accent-teal: #7ea8b3;
-    --radius-lg: 20px;
-    --radius-md: 12px;
-    --radius-sm: 8px;
-    --font: 'Segoe UI', Roboto, Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: var(--font);
-    background: var(--bg-outer);
-    min-height: 100vh;
-}
-
-/* ===== Contenedor general ===== */
-.dashboard {
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-outer);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+:root { 
+    --bg-outer: #14152e; 
+    --bg-main: #10123a; 
+    --header-bg: #4b4b4b; 
+    --card-bg: #4b4d68; 
+    --card-bg-light: #5a5c7a; 
+    --text-white: #ffffff; 
+    --text-muted: #cfd0dc; 
+    --alert-red: #e64848; 
+    --accent-blue: #3b6fe0; 
+    --accent-teal: #7ea8b3; 
+    --radius-lg: 20px; 
+    --radius-md: 12px; 
+    --radius-sm: 8px; 
+    --font: 'Segoe UI', Roboto, Arial, sans-serif; 
+} 
+ 
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+html, body { 
+    height: 100%; 
+} 
+ 
+body { 
+    font-family: var(--font); 
+    background: var(--bg-outer); 
+    min-height: 100vh; 
+} 
+ 
+.dashboard { 
+    width: 100%; 
+    min-height: 100vh; 
+    background: var(--bg-outer); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+} 
+ 
+.dashboard-main { 
+    background: var(--bg-main); 
+    padding: 35px 40px 45px; 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 22px; 
 }
 
 /* ===== Header ===== */
-.dashboard-header {
-    background: var(--header-bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 40px;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.menu-toggle span {
-    width: 22px;
-    height: 2px;
-    background: var(--text-white);
-    display: block;
-}
-
-.menu-toggle:focus-visible {
-    outline: 2px solid var(--accent-blue);
-    outline-offset: 3px;
-    border-radius: var(--radius-sm);
-}
-
-.user-avatar-dot {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #d9a6d9;
-}
-
-.dashboard-header h1 {
-    color: var(--text-white);
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-}
-
-.search-bar {
-    position: relative;
-    flex: 1;
-    max-width: 420px;
-    min-width: 200px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px 40px 10px 16px;
-    border-radius: 20px;
-    border: none;
-    background: #e9e9ee;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-.search-bar input::placeholder {
-    color: #8a8a90;
-}
-
-.search-bar input:focus {
-    outline: 2px solid var(--accent-blue);
-    outline-offset: 2px;
-}
-
-.search-icon {
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    color: #555;
-    pointer-events: none;
-}
-
-/* ===== Main ===== */
-.dashboard-main {
-    background: var(--bg-main);
-    padding: 35px 40px 45px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-}
-
-/* Usuario */
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    max-width: 720px;
-    margin-bottom: 4px;
-}
-
-.user-profile-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: var(--text-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--bg-outer);
-}
-
-.user-profile-icon svg {
-    width: 24px;
-    height: 24px;
-}
-
-.user-profile p {
-    color: var(--text-white);
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-}
-
-/* Contenedor central de la sección de ayuda */
-.help-content-container {
-    width: 100%;
-    max-width: 720px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-/* Tarjeta principal de datos de usuario */
-.help-info-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 32px 45px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    width: 100%;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-}
-
-.help-info-item {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.help-item-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--text-white);
-    flex-shrink: 0;
-}
-
-.help-info-item p {
-    color: var(--text-white);
-    font-size: 1.2rem;
-    letter-spacing: 0.8px;
-    display: flex;
-    gap: 24px;
-}
-
-.help-info-item strong {
-    font-weight: 700;
-}
-
-.help-info-item span {
-    font-weight: 400;
-    color: var(--text-white);
-}
-
-/* Sección Preguntas Frecuentes */
-.faq-section {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-}
-
-.faq-section h2 {
-    color: var(--text-white);
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 4px;
-}
-
-.faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-}
-
-.faq-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.faq-button {
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 18px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-white);
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    cursor: pointer;
-    text-align: left;
-}
-
-.faq-icon-left, .faq-icon-right {
-    width: 20px;
-    height: 20px;
-    color: var(--text-white);
-}
-
-.faq-button:hover {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-/* Botón inferior Banner */
-.banner-action-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 4px;
-}
-
-.banner-action-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: var(--accent-blue);
-    color: var(--text-white);
-    border: none;
-    border-radius: var(--radius-lg);
-    padding: 16px 50px;
-    width: auto;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(59, 111, 224, 0.35);
-}
-
-.banner-action-button svg {
-    width: 22px;
-    height: 22px;
-}
-
-.banner-action-button:hover {
-    background: #4d84f0;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-    background: var(--header-bg);
-    text-align: center;
-    padding: 10px;
-}
-
-.site-footer p {
-    color: var(--text-muted);
-    font-size: 0.75rem;
+.dashboard-header { 
+    background: var(--header-bg); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 18px 40px; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+} 
+ 
+.header-nav { 
+    display: flex; 
+    align-items: center; 
+    gap: 14px; 
+} 
+ 
+.menu-toggle { 
+    background: none; 
+    border: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 4px; 
+    cursor: pointer; 
+    padding: 4px; 
+} 
+ 
+.menu-toggle span { 
+    width: 22px; 
+    height: 2px; 
+    background: var(--text-white); 
+    display: block; 
+} 
+ 
+.user-avatar-dot { 
+    width: 22px; 
+    height: 22px; 
+    border-radius: 50%; 
+    background: #d9a6d9; 
+} 
+ 
+.dashboard-header h1 { 
+    color: var(--text-white); 
+    font-size: 1.3rem; 
+    letter-spacing: 1px; 
+} 
+ 
+.search-bar { 
+    position: relative; 
+    flex: 1; 
+    max-width: 420px; 
+    min-width: 200px; 
+} 
+ 
+.search-bar input { 
+    width: 100%; 
+    padding: 10px 40px 10px 16px; 
+    border-radius: 20px; 
+    border: none; 
+    background: #e9e9ee; 
+    font-size: 0.9rem; 
+    color: #333; 
+} 
+ 
+.search-icon { 
+    position: absolute; 
+    right: 14px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 18px; 
+    height: 18px; 
+    color: #555; 
+    pointer-events: none; 
 }
