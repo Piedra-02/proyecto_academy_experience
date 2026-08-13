@@ -1,0 +1,272 @@
+/* =========================================
+   Estilos específicos de gestion.html
+   Requiere que css/style.css esté enlazado antes
+   (usa sus variables generales: --text-white, --accent-blue,
+   --radius-sm/md/lg, --text-muted, --font, etc.)
+   ========================================= */
+
+/* Variables propias de esta pantalla */
+:root {
+    --accent-teal-nav: #4d90a0;
+    --accent-teal-nav-hover: #5ba3b4;
+    --accent-pink: #e05fd0;
+    --schedule-card-bg: #26284f;
+    --class-card-bg: #1c1e3d;
+}
+
+/* Utilidad: oculta visualmente pero mantiene el texto accesible
+   para lectores de pantalla (se usa en los botones de solo ícono) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Punto decorativo oscuro para esta pantalla (en vez del rosado) */
+.user-avatar-dot--dark {
+    background: #2b2d63;
+}
+
+/* --- Barra de búsqueda: botón de enviar con ícono --- */
+.search-bar .search-submit {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #555;
+    cursor: pointer;
+}
+
+.search-submit-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.search-bar .search-submit:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* --- Selector de día (nav) --- */
+.selector-dia {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.selector-dia button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: var(--accent-teal-nav);
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+.selector-dia button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.selector-dia button:hover {
+    background: var(--accent-teal-nav-hover);
+}
+
+.selector-dia button:focus-visible {
+    outline: 2px solid var(--text-white);
+    outline-offset: 2px;
+}
+
+.selector-dia h2 {
+    flex: 1;
+    text-align: center;
+    background: var(--accent-teal-nav);
+    color: var(--text-white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* --- Sección de horario --- */
+.seccion-horario {
+    background: var(--schedule-card-bg);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    flex: 1;
+}
+
+.horario-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.horario-header h2 {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.icono-calendario {
+    display: flex;
+    color: var(--text-white);
+}
+
+.icono-calendario svg {
+    width: 22px;
+    height: 22px;
+}
+
+.grid-horario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* --- Tarjeta de clase individual --- */
+.tarjeta-clase {
+    position: relative;
+    background: var(--class-card-bg);
+    border-radius: var(--radius-md);
+    padding: 14px 16px 30px;
+    min-height: 130px;
+}
+
+.clase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.clase-header time {
+    color: var(--text-white);
+    font-size: 0.72rem;
+}
+
+.clase-header button {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.clase-header button svg {
+    width: 15px;
+    height: 15px;
+}
+
+.clase-header button:hover {
+    color: var(--text-white);
+}
+
+.clase-header button:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+.icono-materia {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-pink);
+}
+
+.tarjeta-clase h3 {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.tarjeta-clase .nrc {
+    text-align: center;
+    color: var(--accent-pink);
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.modalidad {
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    color: var(--text-muted);
+    font-size: 0.6rem;
+    letter-spacing: 0.4px;
+}
+
+/* --- Botón de acción principal (Aula Virtual) --- */
+.acciones-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.acciones-footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 12px 28px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.acciones-footer button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.acciones-footer button:hover {
+    background: #4d84f0;
+}
+
+.acciones-footer button:focus-visible {
+    outline: 2px solid var(--text-white);
+    outline-offset: 2px;
+}
+
+.acciones-footer button:disabled {
+    background: #5a5c7a;
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
