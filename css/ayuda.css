@@ -330,3 +330,63 @@ body {
     color: var(--text-muted);
     font-size: 0.75rem;
 }
+
+/* ===== Media Queries - Pantalla de Ayuda ===== */
+
+/* Paso 1: Laptop pequeña */
+@media (max-width: 1024px) {
+
+    .dashboard-header {
+        padding: 18px 30px;
+    }
+
+    .dashboard-main {
+        padding: 30px 30px 40px;
+    }
+
+    .help-content-container {
+        max-width: 680px;
+    }
+
+    .help-info-card {
+        padding: 30px 35px;
+    }
+}
+
+
+/* Paso 2: Tablet */
+@media (max-width: 720px) {
+
+    .dashboard-header {
+        padding: 16px 24px;
+    }
+
+    .dashboard-main {
+        padding: 25px 24px 35px;
+    }
+
+    .search-bar {
+        max-width: 300px;
+        min-width: 160px;
+    }
+
+    .help-content-container {
+        max-width: 100%;
+    }
+
+    .help-info-card {
+        padding: 26px 28px;
+    }
+
+    .help-info-item p {
+        font-size: 1.1rem;
+    }
+
+    .faq-button {
+        padding: 17px 24px;
+    }
+
+    .banner-action-button {
+        padding: 15px 40px;
+    }
+}
