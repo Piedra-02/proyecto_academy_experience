@@ -244,3 +244,58 @@
     outline: 2px solid var(--accent-blue);
     outline-offset: 2px;
 }
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE — Flexbox + Media Queries
+   ========================================================== */
+ 
+/* Paso 1 — Tablets (≤720px).
+   La grilla de 2 columnas de mensajes colapsa a 1 columna,
+   y la barra de acciones puede envolver (flex-wrap) si falta espacio. */
+@media (max-width: 720px) {
+    .comm-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .comm-toolbar {
+        flex-wrap: wrap;
+    }
+ 
+    .page-number {
+        min-width: 60px;
+    }
+}
+ 
+/* Paso 2 — Móviles (≤480px).
+   Flexbox reorganiza toolbar, tarjetas y paginación en columna. */
+@media (max-width: 480px) {
+ 
+    /* La barra de acciones (REDACTAR + archivo) pasa de fila
+       a columna, y align-items: stretch hace que ambos botones
+       ocupen el ancho completo en vez de quedar centrados. */
+    .comm-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+ 
+    /* Cada tarjeta de mensaje pasa de fila (avatar + texto lado
+       a lado) a columna, con el avatar centrado arriba y el
+       texto debajo — evita que el mensaje quede muy comprimido. */
+    .message-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+ 
+    /* La paginación puede envolver a una segunda línea si los
+       números y flechas no caben en el ancho disponible. */
+    .comm-pagination {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+}
+ 
