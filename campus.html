@@ -14,11 +14,18 @@
         <!-- Encabezado y navegacion -->
         <header class="dashboard-header">
             <nav class="header-nav">
-                <button class="menu-toggle" aria-label="Abrir menú">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+                <nav id="main-navigation" class="main-navigation" aria-label="Navegación principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="campus.html" class="is-current" aria-current="page">Campus</a>
+                    <a href="comunicacion.html">Comunicación</a>
+                    <a href="gestion.html">Gestión Académica</a>
+                    <a href="ayuda.html">Ayuda</a>
+                </nav>
                 <span class="user-avatar-dot"></span>
                 <h1>CAMPUS</h1>
             </nav>
@@ -156,5 +163,6 @@
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

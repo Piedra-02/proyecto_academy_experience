@@ -53,6 +53,7 @@ body {
 }
 
 .header-nav {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -79,6 +80,52 @@ body {
     outline: 2px solid var(--accent-blue);
     outline-offset: 3px;
     border-radius: var(--radius-sm);
+}
+
+/* Menú de navegación principal: oculto por defecto, se abre con
+   el botón hamburguesa. display:none/flex se controla con JS
+   agregando/quitando la clase .is-open (ver script.js). */
+.main-navigation {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    flex-direction: column;
+    min-width: 220px;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 50;
+}
+
+.main-navigation.is-open {
+    display: flex;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    color: var(--text-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    background: var(--card-bg-light);
+}
+
+.main-navigation a:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Resalta el enlace de la página en la que ya estás */
+.main-navigation a.is-current {
+    background: var(--accent-blue);
 }
 
 .user-avatar-dot {
@@ -493,4 +540,4 @@ img.class-video-placeholder {
     .join-class-button {
         justify-content: center;
     }
-}   
+}
