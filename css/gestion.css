@@ -419,3 +419,107 @@
 
     cursor: not-allowed;
 }
+
+
+
+/* =========================================
+   MEDIA QUERY 1
+   Laptop pequeña y tablets
+   Máximo 1024px
+   ========================================= */
+
+/*
+   En pantallas de hasta 1024px se reduce
+   la cantidad de columnas del horario de
+   tres a dos.
+
+   Esto permite que las tarjetas mantengan
+   un tamaño adecuado y evita que el contenido
+   se vea demasiado comprimido.
+   */
+
+@media (max-width: 1024px) {
+
+    .seccion-horario {
+        padding: 20px;
+    }
+
+    .grid-horario {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .tarjeta-clase {
+        min-height: 125px;
+    }
+
+    .selector-dia {
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERY 2
+   Tablets pequeñas y dispositivos móviles
+   Máximo 720px
+   ========================================= */
+
+/*
+   En pantallas de hasta 720px el horario
+   cambia a una sola columna.
+
+   También se reducen algunos espacios y
+   tamaños para mejorar la visualización
+   y navegación en dispositivos móviles.
+   */
+
+@media (max-width: 720px) {
+
+    .selector-dia {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .selector-dia button {
+        width: 40px;
+        height: 38px;
+    }
+
+    .selector-dia h2 {
+        font-size: 0.78rem;
+        padding: 9px;
+    }
+
+    .seccion-horario {
+        padding: 16px;
+        border-radius: var(--radius-md);
+    }
+
+    .horario-header {
+        margin-bottom: 16px;
+    }
+
+    .horario-header h2 {
+        font-size: 1rem;
+    }
+
+    .grid-horario {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tarjeta-clase {
+        min-height: 120px;
+        padding: 12px 14px 28px;
+    }
+
+    .acciones-footer {
+        margin-top: 18px;
+    }
+
+    .acciones-footer button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
