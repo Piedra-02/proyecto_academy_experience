@@ -205,3 +205,49 @@
     color: var(--warning-yellow);
 }
 
+
+
+
+/* ==========================================================
+   RESPONSIVE — Flexbox + Media Queries
+   ========================================================== */
+ 
+/* Paso 1 — Laptops pequeñas (≤1024px).
+   El grid deja la proporción 1.6fr/1fr y pasa a 1.2fr/1fr,
+   dando más espacio al panel de ruta antes del colapso total. */
+@media (max-width: 1024px) {
+    .campus-content {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+ 
+/* Paso 2 — Tablets (≤720px).
+   El grid colapsa a 1 columna: mapa arriba, ruta debajo. */
+@media (max-width: 720px) {
+    .campus-content {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+/* Paso 3 — Móviles (≤480px).
+   Flexbox reorganiza el contenido interno de las tarjetas. */
+@media (max-width: 480px) {
+ 
+    /* map-info pasa de fila (EDIFICIO 4 | 2 MINUTOS lado a lado)
+       a columna, para que ambos datos queden legibles uno debajo
+       del otro en vez de comprimirse en el ancho disponible. */
+    .map-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+ 
+    .map-card {
+        padding: 16px;
+    }
+ 
+    .route-card {
+        padding: 16px;
+    }
+}
+ 
