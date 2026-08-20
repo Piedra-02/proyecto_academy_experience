@@ -390,3 +390,113 @@ body {
         padding: 15px 40px;
     }
 }
+
+/* Paso 3: Móvil */
+@media (max-width: 480px) {
+
+    /* Header */
+    .dashboard-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px 18px;
+    }
+
+    .header-nav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+
+    /* Contenido principal */
+    .dashboard-main {
+        padding: 22px 16px 30px;
+        gap: 18px;
+    }
+
+
+    /* Usuario */
+    .user-profile {
+        gap: 10px;
+        margin-bottom: 2px;
+    }
+
+    .user-profile-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .user-profile-icon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+
+    /* Contenedor de ayuda */
+    .help-content-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
+    /* Tarjeta de información */
+    .help-info-card {
+        padding: 22px 18px;
+        gap: 18px;
+    }
+
+    .help-info-item {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .help-item-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .help-info-item p {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+
+    /* Preguntas frecuentes */
+    .faq-section {
+        gap: 10px;
+    }
+
+    .faq-list {
+        gap: 10px;
+    }
+
+    .faq-button {
+        padding: 16px 18px;
+        gap: 10px;
+    }
+
+
+    /* Botón inferior */
+    .banner-action-container {
+        margin-top: 2px;
+    }
+
+    .banner-action-button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+
+    /* Footer */
+    .site-footer {
+        padding: 10px 8px;
+    }
+}
